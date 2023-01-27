@@ -2,19 +2,24 @@
   "name": "nextjs-13beta-ecommerce",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "scripts": {
-    "run:script": "ts-node --esm ./prisma/script.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@heroicons/react": "^2.0.13",
     "@next/font": "13.1.2",
     "@prisma/client": "^4.9.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
+    "classnames": "^2.3.2",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
     "next": "13.1.2",
