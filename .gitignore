@@ -35,10 +35,13 @@ yarn-error.log*
 # vscode
 .vscode
 
-#
-.test
-.hide
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#prisma
+/prisma/script.mts
+
+#
+.test
+.hide

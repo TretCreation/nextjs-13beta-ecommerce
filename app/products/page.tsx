@@ -1,7 +1,13 @@
 import React from 'react'
+import ProductsList from './ProductsList'
 
-const page = () => {
-	return <div>Product page</div>
+const Products = () => {
+	return (
+		<>
+			{/* @ts-ignore */}
+			<ProductsList />
+		</>
+	)
 }
 
-export default page
+export default Products
