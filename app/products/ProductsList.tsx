@@ -15,24 +15,29 @@ export default async function ProductsList() {
 	const data = await getProducts()
 
 	return (
-		<>
+		<div className='flex flex-row flex-wrap justify-between'>
 			{data.map((product: IProducts) => (
-				<div className='container pb-16'>
-					<div className='bg-white shadow rounded overflow-hidden group'>
-						<div className='relative'>
-							<Link href={`products/${product.id}`}>
-								Products: {product.id}
-							</Link>
-							<Image
-								src={product.img}
-								alt={product.name}
-								width={40}
-								height={40}
-							/>
-						</div>
+				<div className='card'>
+					<Link href={`products/${product.id}`}>
+						<Image
+							src={product.img}
+							alt={product.name}
+							width={200}
+							height={0}
+							className='rounded shadow'
+						/>
+					</Link>
+					<div className='flex flex-col items-center justify-center p-5'>
+						<Link href={`products/${product.id}`}>
+							<h2 className='text-lg'>{product.name}</h2>
+						</Link>
+						<p>${product.price}</p>
+						<button className='primary-button' type='button'>
+							Add to cart
+						</button>
 					</div>
 				</div>
 			))}
-		</>
+		</div>
 	)
 }
